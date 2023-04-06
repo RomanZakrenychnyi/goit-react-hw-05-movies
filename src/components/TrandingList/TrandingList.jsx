@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getTrandingMoviesPerDay } from '../../Service/API';
 import { useEffect, useState } from 'react';
 
 export const TrandingList = () => {
   const [movies, setMovies] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     const awaiting = async () => {
@@ -18,7 +19,7 @@ export const TrandingList = () => {
       {movies?.map(({ id, title }) => {
         return (
           <li key={id}>
-            <Link to={`/movies/${+id}`}>{title}</Link> 
+            <Link to={`/movies/${id}`} state={{from: location }}>{title}</Link>
           </li>
         );
       })}

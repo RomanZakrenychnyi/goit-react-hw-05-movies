@@ -17,7 +17,6 @@ export const getTrandingMoviesPerDay = async () => {
 export const searchMovieByName = async (id) => {
   try {
     const promise = await axios.get(`/search/movie?query=${id}&api_key=${API_KEY}`);
-    console.log(promise.data.results);
       return promise.data.results
   } catch (error) {
       toast('Movie not found');
