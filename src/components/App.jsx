@@ -1,7 +1,13 @@
+import { HomePage } from "pages/HomePage";
+import { Route, Routes } from "react-router-dom";
+
+
 export const App = () => {
   return (
     <div>
-      <h1>HW 5 React start!</h1>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
     </div>
   );
 };
