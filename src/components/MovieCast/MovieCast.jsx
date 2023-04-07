@@ -22,7 +22,7 @@ const MovieCast = () => {
         return (
           <li key={id}>
             <img className={style.imgActor}
-              src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+              src={profile_path&&`https://image.tmdb.org/t/p/w500${profile_path}`}
               alt=""
             />
             <p>{name}</p>

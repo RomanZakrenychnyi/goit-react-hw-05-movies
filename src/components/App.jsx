@@ -20,17 +20,17 @@ export const App = () => {
           Movies
         </NavLink>
       </div>
-      <Suspense fallback={<p>...Loading</p>}>
+      <Suspense fallback={<p>...Loading</p>}></Suspense>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/movies/:movieId" element={<MovieCard />}>
-            <Route path="cast" element={<MovieCast />} />
-            <Route path="reviews" element={<MovieReview />} />
+          <Route path="/" element={<Suspense fallback={<p>...Loading</p>}><HomePage /></Suspense>} />
+          <Route path="/movies/:movieId" element={<Suspense fallback={<p>...Loading</p>}><MovieCard /></Suspense>}>
+            <Route path="cast" element={<Suspense fallback={<p>...Loading</p>}><MovieCast /></Suspense>} />
+            <Route path="reviews" element={<Suspense fallback={<p>...Loading</p>}><MovieReview /></Suspense>} />
           </Route>
-          <Route path="/movies" element={<MoviePage />}></Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="/movies" element={<Suspense fallback={<p>...Loading</p>}><MoviePage /></Suspense>}></Route>
+          <Route path="*" element={<Suspense fallback={<p>...Loading</p>}><NotFound /></Suspense>} />
         </Routes>
-      </Suspense>
+      
     </div>
   );
 };
