@@ -1,0 +1,21 @@
+.btn {
+  margin: 5px 0 5px 1px;
+}
+.btn a {
+  text-decoration: none;
+}
+
+.container{
+    display: flex;
+    gap: 20px
+}
+
+.container img {
+      width: 250px;
+}
+
+.info {
+    margin-top: 5px;
+    border-top: 2px solid rgba(0, 0, 255, 0.253);
+    border-bottom: 2px solid rgba(0, 0, 255, 0.253);
+}

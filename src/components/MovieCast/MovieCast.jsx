@@ -1,8 +1,9 @@
 import { getMovieActorsDetail } from 'Service/API';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import style from './MovieCast.module.css';
 
-export const MovieCast = () => {
+const MovieCast = () => {
   const [actors, setActors] = useState([]);
   const { movieId } = useParams();
 
@@ -20,7 +21,7 @@ export const MovieCast = () => {
       {actors.map(({ name, character, profile_path, id }) => {
         return (
           <li key={id}>
-            <img
+            <img className={style.imgActor}
               src={`https://image.tmdb.org/t/p/w500${profile_path}`}
               alt=""
             />
@@ -32,3 +33,5 @@ export const MovieCast = () => {
     </ul>
   );
 };
+
+export default MovieCast;

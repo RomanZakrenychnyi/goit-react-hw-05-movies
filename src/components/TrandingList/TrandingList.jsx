@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 export const TrandingList = () => {
   const [movies, setMovies] = useState([]);
   const location = useLocation();
-
+  
   useEffect(() => {
     const awaiting = async () => {
       const tradingList = await getTrandingMoviesPerDay();

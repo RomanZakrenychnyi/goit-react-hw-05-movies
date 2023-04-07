@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const NotFound = () => {
+const NotFound = () => {
   return (
     <>
       <h1>Error! Please check if url address is correct.</h1>
@@ -11,3 +11,5 @@ export const NotFound = () => {
     </>
   );
 };
+
+export default NotFound;

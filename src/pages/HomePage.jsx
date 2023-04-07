@@ -1,9 +1,11 @@
 import { TrandingList } from 'components/TrandingList/TrandingList';
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <TrandingList />
     </>
   );
 };
+
+export default HomePage;
